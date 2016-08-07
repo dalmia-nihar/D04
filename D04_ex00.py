@@ -11,19 +11,43 @@
 #         - then ends the program
 ################################################################################
 # Imports
+import random
+
+def take_input():
+	try:
+		num = int(input("Please enter an integer between 1 to 25: "))
+		return num
+	except: 
+		print("Nice Try, not an integer")
+			
 
 
-# Body
-
-
+def check_random(x):
+	for i in range(5):
+		print("Chance: " + str(i+1))
+		n = take_input()
+		if n == None:
+			continue
+		elif x == n:
+			print ("Bingo!")
+			break
+		elif 1 <= n <= 25 and x < n:
+			print ("Too High")
+			continue
+		elif 1 <= n <= 25 and x > n:
+			print ("Too Low")
+			continue
+		else:
+			print("Number not between 1 and 25")
 
 
 ################################################################################
 def main():
-
-
-    print("Hello World!") # Remove this and replace with your function calls
-    
+    x = random.randint(1, 25)
+    check_random(x)
+    print("The correct answer was: " + str(x))
+    print("Thank you for playing!")
+ 
 
 if __name__ == '__main__':
     main()

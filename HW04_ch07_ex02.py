@@ -21,15 +21,23 @@
 
 ###############################################################################
 # Imports
+import math
 
-
-# Body
+def eval_loop():
+	x = "NA"
+	while(True):
+		s = input("Please enter your expression: ")
+		if(s == 'done'):
+			print("Final Answer: " + x)
+			break
+		else:
+			x = str(eval(s))
+			print ("Temp Answer: " + x)
 
 
 ###############################################################################
 def main():
-    pass  # Remove this line and uncomment below once eval_loop is defined.
-    # eval_loop()
+    eval_loop()
 
 if __name__ == '__main__':
     main()

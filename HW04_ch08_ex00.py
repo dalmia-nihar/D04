@@ -19,15 +19,26 @@
 # Imports
 
 
-# Body
-
+def count(word,ch):
+	cnt = 0
+	for letter in word:
+		if letter == ch:
+			cnt += 1
+	print("The count of '" + ch + "' in the string '" + word + "' is: " + str(cnt))
 
 ###############################################################################
 def main():
-
     # Remove print("Hello World!") and add several functions calls to count()
     # below, passing various strings and letters
-    print("Hello World!")
+    count("Banana", "a")
+    count("Banana", "z")
+    count("lol", "l")
+    count("University of California, Berkeley", " ")
+    count("MIMS", "S")
+    count("This is the last one", "s")
+
+
+    
 
 
 if __name__ == '__main__':
